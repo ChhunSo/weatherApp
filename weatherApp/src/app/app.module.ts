@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { WeatherListComponent } from '../dev/weather/weather-list.component';
+import { WeatherItemComponent } from '../dev/weather/weather-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherListComponent
+    WeatherListComponent,
+    WeatherItemComponent
   ],
   imports: [
     BrowserModule,

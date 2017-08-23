@@ -3,19 +3,27 @@
   width: 40%;
 }
 
-.col-1 h3 {
+.col-2 p {
   margin: 0 0 10px 0;
   padding: 0;
   font-size: 22px;
 }
 
 .col-2 {
-  display: inline-block;
   width: 50%;
   vertical-align: top;
-  text-align: right;
+}
+.info {
+  display: inline-block;
+  margin-right: -10px; 
+  text-align: left;
 }
 
 .temperature {
+  display: inline-block;
   font-size: 22px;
+  text-align: right;
+}
+.card {
+  width: 20em;
 }
