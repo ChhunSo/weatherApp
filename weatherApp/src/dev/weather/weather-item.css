@@ -2,13 +2,11 @@
   display: inline-block;
   width: 40%;
 }
-
 .col-2 p {
   margin: 0 0 10px 0;
   padding: 0;
   font-size: 22px;
 }
-
 .col-2 {
   width: 50%;
   vertical-align: top;
@@ -19,7 +17,6 @@
   color: rgba(95, 95, 95, 0.51);
   font-weight: bold;
 }
-
 .temperature {
   font-size: 22px;
   float: right;
@@ -27,7 +24,6 @@
 .card {
   width: 20em;
 }
-
 .weather-element {
   box-shadow: 1px 1px 6px #ccc;
   padding: 10px;
