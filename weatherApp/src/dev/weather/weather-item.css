@@ -12,18 +12,24 @@
 .col-2 {
   width: 50%;
   vertical-align: top;
+  display: inline-block;
 }
 .info {
-  display: inline-block;
-  margin-right: -10px; 
-  text-align: left;
+  float: left;
+  color: rgba(95, 95, 95, 0.51);
+  font-weight: bold;
 }
 
 .temperature {
-  display: inline-block;
   font-size: 22px;
-  text-align: right;
+  float: right;
 }
 .card {
   width: 20em;
+}
+
+.weather-element {
+  box-shadow: 1px 1px 6px #ccc;
+  padding: 10px;
+  margin: 10px 0;
 }
