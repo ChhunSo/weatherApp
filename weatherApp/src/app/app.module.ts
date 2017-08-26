@@ -1,31 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import 'rxjs/Rx';
 
 import { AppComponent } from './app.component';
-import { WeatherListComponent } from '../dev/weather/weather-list.component';
-import { WeatherItemComponent } from '../dev/weather/weather-item.component';
-import { WeatherItem } from '../dev/weather/weather-item';
-import { WEATHER_ITEMS } from '../dev/weather/weather.data';
-import { WeatherService } from '../dev/weather/weather.service';
-import { WeatherSearchComponent } from'../dev/weather/weather-search.component';
+import { HeaderComponent } from './header/header.component';
+import { CurrentComponent } from './current/current.component';
+import { ForecastComponent } from './forecast/forecast.component';
+import {weatherRouting} from './weather.routing';
+import {WeatherService} from './weather.service';
+import {ResolveLocationService} from './resolve-location.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherListComponent,
-    WeatherItemComponent,
-    WeatherItem,
-    WEATHER_ITEMS
+    HeaderComponent,
+    CurrentComponent,
+    ForecastComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    weatherRouting,
+    ReactiveFormsModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherService, ResolveLocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

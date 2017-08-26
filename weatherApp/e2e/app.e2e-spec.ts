@@ -1,10 +1,10 @@
-import { WeatherAppPage } from './app.po';
+import { WeahterAppPage } from './app.po';
 
-describe('weather-app App', function() {
-  let page: WeatherAppPage;
+describe('weahter-app App', function() {
+  let page: WeahterAppPage;
 
   beforeEach(() => {
-    page = new WeatherAppPage();
+    page = new WeahterAppPage();
   });
 
   it('should display message saying app works', () => {
