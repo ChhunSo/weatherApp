@@ -1,14 +1,62 @@
-<form>
-	<input type="text">
-	<button></button>
+<form [formGroup]='forecastForm' (ngSubmit)='onSubmit()'>
+	<input type="text" formControlName="forecastCity">
+	<button>go</button>
 </form>
-<div class='day'>
-	<h2>Date</h2>
-</div>
-<div class='icon'>
-	<img src="http://weather.omgez911.com/icons/01.d.png">
-</div>
-<div class='temp'>
-	<h4>Max</h4>
-	<h4>Min</h4>
+
+<div class='container'>
+	<div class='row threeDay'>
+		<div class='day' *ngFor="let day of cityForecast">
+			<h2>{{day.day | date: 'longDate'}}</h2>
+			<div class='icon'>
+				<img src="http://openweathermap.org/img/w/{{day.icon}}.png">
+				<h4>{{day.description}}</h4>
+			</div> <!-- / .icon  -->
+			<div class='temp'>
+				<h4>{{day.tempMax}}°</h4>
+				<h4>{{day.tempMin}}°</h4>
+			</div> <!-- / .row -->
+		</div> <!-- /. day  -->
+	</div> <!-- /.threeDayrow -->
+
+	<div class='row fiveDay'>
+		<div class='day' *ngFor="let day of cityForecast">
+			<h2>{{day.day | date: 'longDate'}}</h2>
+			<div class='icon'>
+				<img src="http://openweathermap.org/img/w/{{day.icon}}.png">
+				<h4>{{day.description}}</h4>
+			</div> <!-- / .icon  -->
+			<div class='temp'>
+				<h4>{{day.tempMax}}°</h4>
+				<h4>{{day.tempMin}}°</h4>
+			</div> <!-- / .temp -->
+		</div> <!-- /. day  -->
+	</div> <!-- /.fiveDayrow -->
+
+	<div class='row sevenDay'>
+		<div class='day' *ngFor="let day of cityForecast">
+			<h2>{{day.day | date: 'longDate'}}</h2>
+			<div class='icon'>
+				<img src="http://openweathermap.org/img/w/{{day.icon}}.png">
+				<h4>{{day.description}}</h4>
+			</div> <!-- / .icon  -->
+			<div class='temp'>
+				<h4>{{day.tempMax}}°</h4>
+				<h4>{{day.tempMin}}°</h4>
+			</div> <!-- / .temp -->
+		</div> <!-- /. day  -->
+	</div> <!-- /.sevenDayrow -->
+
+	<div class='row fourteenDay'>
+		<div class='day' *ngFor="let day of cityForecast">
+			<h2>{{day.day | date: 'longDate'}}</h2>
+			<div class='icon'>
+				<img src="http://openweathermap.org/img/w/{{day.icon}}.png">
+				<h4>{{day.description}}</h4>
+			</div> <!-- / .icon  -->
+			<div class='temp'>
+				<h4>{{day.tempMax}}°</h4>
+				<h4>{{day.tempMin}}°</h4>
+			</div> <!-- / .temp -->
+		</div> <!-- /. day  -->
+	</div> <!-- /.fourteenDayrow -->
 </div>
